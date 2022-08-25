@@ -196,6 +196,8 @@ public class POIUtils {
             return null;
         }
         switch (cell.getCellType()) {
+            case FORMULA:
+                return null;
             case NUMERIC:
                 if (DateUtil.isCellDateFormatted(cell)) {
                     return cell.getDateCellValue();
